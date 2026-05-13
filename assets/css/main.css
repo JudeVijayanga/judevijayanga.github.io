@@ -881,3 +881,63 @@ code {
 .expertise-grid .box.style1 { transition: transform 0.3s ease; }
 .expertise-grid .box.style1:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
 
+/* --- Mobile Responsive Optimizations --- */
+
+@media screen and (max-width: 736px) {
+    /* Home Section Fixes */
+    #top {
+        padding: 4em 0 !important;
+        background-attachment: scroll !important; /* Fixed background lag on mobile */
+    }
+    
+    #top .row {
+        flex-direction: column-reverse; /* Put profile pic on top of text on mobile */
+        text-align: center;
+    }
+    
+    .profile-img img {
+        width: 180px;
+        height: 180px;
+        margin: 0 auto 2em auto; /* Center profile pic */
+    }
+
+    #top h1 {
+        font-size: 1.8em !important;
+    }
+
+    /* Research Section Fixes */
+    .expertise-grid .col-4 {
+        margin-bottom: 2em;
+    }
+
+    .research-content-block {
+        padding: 2em 1em;
+    }
+
+    /* Leisure Cards - Stack them vertically */
+    .trip-card {
+        margin-bottom: 2em;
+    }
+
+    /* Modal Gallery Fixes for Small Screens */
+    .modal img {
+        max-width: 95%;
+        max-height: 70vh;
+    }
+
+    .nav-modal {
+        font-size: 1.2em;
+        padding: 10px;
+        margin: 0 5px;
+    }
+
+    /* Timeline Adjustments */
+    .timeline-item {
+        padding-left: 20px;
+    }
+}
+
+/* Fix for horizontal scrolling on some devices */
+body {
+    overflow-x: hidden;
+}
